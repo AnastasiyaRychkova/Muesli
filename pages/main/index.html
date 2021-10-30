@@ -7,7 +7,43 @@
 	<title>Мюсли – Главная</title>
 </head>
 <body>
-	<h1>Главная</h1>
+	<nav class="tab-bar">
+		<ul>
+			<li class="menu-item">
+				<div class="menu-item_icon">
+					<img src="" alt="">
+				</div>
+				<span class="menu-item_name">Главная</span>
+			</li>
+			<li class="menu-item">
+				<a href="">
+					<div class="menu-item_icon">
+						<img src="" alt="">
+					</div>
+					<span class="menu-item_name">Сохраненное</span>
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="../search/search.html">
+					<div class="menu-item_icon">
+						<img src="" alt="">
+					</div>
+					<span class="menu-item_name">Поиск</span>
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="">
+					<div class="menu-item_icon">
+						<img src="" alt="">
+					</div>
+					<span class="menu-item_name">Профиль</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<header class="page-header">
+		<h1>Главная</h1>
+	</header>
 	<section class="resource-recomendations">
 		<h2>Эти ресурсы могут быть вам полезны</h2>
 		<ul class="resource-list">
@@ -49,163 +85,135 @@
 	</section>
 	<section class="new-articles">
 		<h2>Новое из читаемых вами ресурсов</h2>
-		<article class="article">
-			<header class="article-header">
-				<div class="article_resource">
-					<div class="article_resource-icon">
+		<a href="../article/index.html">
+			<article class="article">
+				<header class="article-header">
+					<div class="article_resource">
+						<div class="article_resource-icon">
+							<img src="" alt="">
+						</div>
+						<span class="article_resource-name">vc.ru</span>
+					</div>
+					<div class="article_publication-time">
+						<time class="additional-info">29 января 2020, 19:30</time>
+					</div>
+				</header>
+				<div class="article_preview">
+					<div class="article_preview-image">
 						<img src="" alt="">
 					</div>
-					<span class="article_resource-name">vc.ru</span>
+					<div class="article-preview-content">
+						<h3 class="article-preview-header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+						<p class="article-preview-text">
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
+					</div>
 				</div>
-				<div class="article_publication-time">
-					<time class="additional-info">29 января 2020, 19:30</time>
-				</div>
-			</header>
-			<div class="article_preview">
-				<div class="article_preview-image">
-					<img src="" alt="">
-				</div>
-				<div class="article-preview-content">
-					<h3 class="article-preview-header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-					<p class="article-preview-text">
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					</p>
-				</div>
-			</div>
-			<ul class="article-tags">
-				<li class="tag-item atricle_tag-item">дизайн</li>
-				<li class="tag-item atricle_tag-item">бизнес</li>
-				<li class="tag-item atricle_tag-item">инвестиции</li>
-				<li class="tag-item atricle_tag-item">lorem</li>
-				<li class="tag-item atricle_tag-item">ipsum</li>
-				<li class="tag-item atricle_tag-item">dollar</li>
-			</ul>
-			<footer class="article-footer">
-				<div class="views">
-					<span class="number-views" aria-label="Количество просмотров">219</span>
-					<span class="reading-duration" aria-label="Продолжительность чтения">9 мин.</span>
-				</div>
-				<button type="button" class="shere-btn article_shere-btn" aria-label="Поделиться"></button>
-				<button type="button" class="favorites-btn article_favorites-btn" aria-label="Добавить в избранное"></button>
-				<button type="button" class="more-btn article_more-btn" aria-label="Показать дополнительные опции"></button>
-			</footer>
-		</article>
-		<article class="article">
-			<header class="article-header">
-				<div class="article_resource">
-					<div class="article_resource-icon">
+				<ul class="article-tags" aria-label="Список тэгов для статьи">
+					<li class="tag-item atricle_tag-item">дизайн</li>
+					<li class="tag-item atricle_tag-item">бизнес</li>
+					<li class="tag-item atricle_tag-item">инвестиции</li>
+					<li class="tag-item atricle_tag-item">lorem</li>
+					<li class="tag-item atricle_tag-item">ipsum</li>
+					<li class="tag-item atricle_tag-item">dollar</li>
+				</ul>
+				<footer class="article-footer">
+					<div class="views">
+						<span class="number-views" aria-label="Количество просмотров">219</span>
+						<span class="reading-duration" aria-label="Продолжительность чтения">9 мин.</span>
+					</div>
+					<button type="button" class="shere-btn article_shere-btn" aria-label="Поделиться"></button>
+					<button type="button" class="favorites-btn article_favorites-btn" aria-label="Добавить в избранное"></button>
+					<button type="button" class="more-btn article_more-btn" aria-label="Показать дополнительные опции"></button>
+				</footer>
+			</article>
+		</a>
+		<a href="#">
+			<article class="article">
+				<header class="article-header">
+					<div class="article_resource">
+						<div class="article_resource-icon">
+							<img src="" alt="">
+						</div>
+						<span class="article_resource-name">vc.ru</span>
+					</div>
+					<div class="article_publication-time">
+						<time class="additional-info">29 января 2020, 19:30</time>
+					</div>
+				</header>
+				<div class="article_preview">
+					<div class="article_preview-image">
 						<img src="" alt="">
 					</div>
-					<span class="article_resource-name">vc.ru</span>
+					<div class="article-preview-content">
+						<h3 class="article-preview-header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+						<p class="article-preview-text">
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
+					</div>
 				</div>
-				<div class="article_publication-time">
-					<time class="additional-info">29 января 2020, 19:30</time>
-				</div>
-			</header>
-			<div class="article_preview">
-				<div class="article_preview-image">
-					<img src="" alt="">
-				</div>
-				<div class="article-preview-content">
-					<h3 class="article-preview-header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-					<p class="article-preview-text">
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					</p>
-				</div>
-			</div>
-			<ul class="article-tags">
-				<li class="tag-item atricle_tag-item">дизайн</li>
-				<li class="tag-item atricle_tag-item">бизнес</li>
-				<li class="tag-item atricle_tag-item">инвестиции</li>
-				<li class="tag-item atricle_tag-item">lorem</li>
-				<li class="tag-item atricle_tag-item">ipsum</li>
-				<li class="tag-item atricle_tag-item">dollar</li>
-			</ul>
-			<footer class="article-footer">
-				<div class="views">
-					<span class="number-views" aria-label="Количество просмотров">219</span>
-					<span class="reading-duration" aria-label="Продолжительность чтения">9 мин.</span>
-				</div>
-				<button type="button" class="shere-btn article_shere-btn" aria-label="Поделиться"></button>
-				<button type="button" class="favorites-btn article_favorites-btn" aria-label="Добавить в избранное"></button>
-				<button type="button" class="more-btn article_more-btn" aria-label="Показать дополнительные опции"></button>
-			</footer>
-		</article>
-		<article class="article">
-			<header class="article-header">
-				<div class="article_resource">
-					<div class="article_resource-icon">
+				<ul class="article-tags" aria-label="Список тэгов для статьи">
+					<li class="tag-item atricle_tag-item">дизайн</li>
+					<li class="tag-item atricle_tag-item">бизнес</li>
+					<li class="tag-item atricle_tag-item">инвестиции</li>
+					<li class="tag-item atricle_tag-item">lorem</li>
+					<li class="tag-item atricle_tag-item">ipsum</li>
+					<li class="tag-item atricle_tag-item">dollar</li>
+				</ul>
+				<footer class="article-footer">
+					<div class="views">
+						<span class="number-views" aria-label="Количество просмотров">219</span>
+						<span class="reading-duration" aria-label="Продолжительность чтения">9 мин.</span>
+					</div>
+					<button type="button" class="shere-btn article_shere-btn" aria-label="Поделиться"></button>
+					<button type="button" class="favorites-btn article_favorites-btn" aria-label="Добавить в избранное"></button>
+					<button type="button" class="more-btn article_more-btn" aria-label="Показать дополнительные опции"></button>
+				</footer>
+			</article>
+		</a>
+		<a href="#">
+			<article class="article">
+				<header class="article-header">
+					<div class="article_resource">
+						<div class="article_resource-icon">
+							<img src="" alt="">
+						</div>
+						<span class="article_resource-name">vc.ru</span>
+					</div>
+					<div class="article_publication-time">
+						<time class="additional-info">29 января 2020, 19:30</time>
+					</div>
+				</header>
+				<div class="article_preview">
+					<div class="article_preview-image">
 						<img src="" alt="">
 					</div>
-					<span class="article_resource-name">vc.ru</span>
+					<div class="article-preview-content">
+						<h3 class="article-preview-header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+						<p class="article-preview-text">
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
+					</div>
 				</div>
-				<div class="article_publication-time">
-					<time class="additional-info">29 января 2020, 19:30</time>
-				</div>
-			</header>
-			<div class="article_preview">
-				<div class="article_preview-image">
-					<img src="" alt="">
-				</div>
-				<div class="article-preview-content">
-					<h3 class="article-preview-header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-					<p class="article-preview-text">
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					</p>
-				</div>
-			</div>
-			<ul class="article-tags">
-				<li class="tag-item atricle_tag-item">дизайн</li>
-				<li class="tag-item atricle_tag-item">бизнес</li>
-				<li class="tag-item atricle_tag-item">инвестиции</li>
-				<li class="tag-item atricle_tag-item">lorem</li>
-				<li class="tag-item atricle_tag-item">ipsum</li>
-				<li class="tag-item atricle_tag-item">dollar</li>
-			</ul>
-			<footer class="article-footer">
-				<div class="views">
-					<span class="number-views" aria-label="Количество просмотров">219</span>
-					<span class="reading-duration" aria-label="Продолжительность чтения">9 мин.</span>
-				</div>
-				<button type="button" class="shere-btn article_shere-btn" aria-label="Поделиться"></button>
-				<button type="button" class="favorites-btn article_favorites-btn" aria-label="Добавить в избранное"></button>
-				<button type="button" class="more-btn article_more-btn" aria-label="Показать дополнительные опции"></button>
-			</footer>
-		</article>
+				<ul class="article-tags" aria-label="Список тэгов для статьи">
+					<li class="tag-item atricle_tag-item">дизайн</li>
+					<li class="tag-item atricle_tag-item">бизнес</li>
+					<li class="tag-item atricle_tag-item">инвестиции</li>
+					<li class="tag-item atricle_tag-item">lorem</li>
+					<li class="tag-item atricle_tag-item">ipsum</li>
+					<li class="tag-item atricle_tag-item">dollar</li>
+				</ul>
+				<footer class="article-footer">
+					<div class="views">
+						<span class="number-views" aria-label="Количество просмотров">219</span>
+						<span class="reading-duration" aria-label="Продолжительность чтения">9 мин.</span>
+					</div>
+					<button type="button" class="shere-btn article_shere-btn" aria-label="Поделиться"></button>
+					<button type="button" class="favorites-btn article_favorites-btn" aria-label="Добавить в избранное"></button>
+					<button type="button" class="more-btn article_more-btn" aria-label="Показать дополнительные опции"></button>
+				</footer>
+			</article>
+		</a>
 	</section>
-	<nav class="tab-bar">
-		<ul>
-			<li class="menu-item">
-				<div class="menu-item_icon">
-					<img src="" alt="">
-				</div>
-				<span class="menu-item_name">Главная</span>
-			</li>
-			<li class="menu-item">
-				<a href="">
-					<div class="menu-item_icon">
-						<img src="" alt="">
-					</div>
-					<span class="menu-item_name">Сохраненное</span>
-				</a>
-			</li>
-			<li class="menu-item">
-				<a href="../search/search.html">
-					<div class="menu-item_icon">
-						<img src="" alt="">
-					</div>
-					<span class="menu-item_name">Поиск</span>
-				</a>
-			</li>
-			<li class="menu-item">
-				<a href="">
-					<div class="menu-item_icon">
-						<img src="" alt="">
-					</div>
-					<span class="menu-item_name">Профиль</span>
-				</a>
-			</li>
-		</ul>
-	</nav>
 </body>
 </html>
