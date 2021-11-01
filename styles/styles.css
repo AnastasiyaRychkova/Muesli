@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&family=Roboto+Slab:wght@700&family=Source+Serif+Pro:ital@1&display=swap');
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Raleway'),
+		url('../fonts/Raleway-Medium.ttf') format('ttf'),
+		url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+}
+
+@font-face {
+	font-family: 'Roboto Slab';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Roboto Slab'),
+		url('../fonts/RobotoSlab-Bold.ttf') format('ttf'),
+		url('https://fonts.googleapis.com/css2?Roboto+Slab:wght@700&display=swap');
+}
+
+
+body {
+	--black: #221E1E;
+
+	font-family: 'Raleway';
+	font-weight: 500;
+	color: var(--black);
+}
+
+h1 {
+	font-family: 'Roboto Slab';
+	font-weight: 700;
+	font-size: 1.875em;
+}
+
+h2 {
+	font-family: 'Roboto Slab';
+	font-weight: 700;
+	font-size: 1.25em;
+}
+
+h3 {
+	font-family: 'Roboto Slab';
+	font-weight: 700;
+	font-size: 1em;
+}
+
+
+
+
+
+/*=============================================
+=                  Position                  =
+=============================================*/
+
+.horizontal-scroll {
+	display: flex;
+	list-style: none;
+	flex-direction: row;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
