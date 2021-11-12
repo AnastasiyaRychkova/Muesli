@@ -1,0 +1,12 @@
+.resource-recommendations {
+	padding-top: 3em;
+	padding-bottom: 1.8em;
+}
+
+.resource-list {
+	margin-top: 1.9em;
+	margin-bottom: 0.5em;
+	margin-left: calc( -1 * var(--page-padding) );
+	width: 100vw;
+}
+
