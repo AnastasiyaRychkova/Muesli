@@ -6,7 +6,8 @@
 .resource-list {
 	margin-top: 1.9em;
 	margin-bottom: 0.5em;
-	margin-left: calc( -1 * var(--page-padding) );
-	width: 100vw;
 }
 
+.new-articles_list {
+	margin: 2.9em 0;
+}

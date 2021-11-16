@@ -1,0 +1,72 @@
+.resource-recommendations {
+	margin-bottom: 4em;
+}
+
+.resource-list {
+	margin-top: 1.9em;
+}
+
+
+
+
+/*=============================================
+=            Resource Cover            =
+=============================================*/
+
+.resource-presentation {
+	display: flex;
+	column-gap: 1.8em;
+	margin-top: var(--page-padding);
+	margin-bottom: 3.7em;
+	padding: 2em;
+	border: 1px solid var(--stroke);
+	border-radius: .5em;
+	background-color: var(--white);
+}
+
+.resource-presentation_cover {
+	width: 6em;
+	height: 6em;
+	border-radius: 50%;
+	background-color: var(--control-elements-background);
+}
+
+.resource-presentation_description {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	row-gap: 1em;
+}
+
+.resource-presentation_subscribes {
+	color: var(--grey);
+}
+
+
+.resource-presentation_subscribe-btn {
+	width: 15em;
+}
+
+/*=====  End of Resource Cover  ======*/
+
+
+
+.resource-articles_tags {
+	margin-top: 1.9em;
+	margin-bottom: 2em;
+}
+
+.article-sort {
+	width: 17em;
+}
+
+
+
+.resource-articles_articles-list {
+	margin-top: 2em;
+	margin-bottom: 2.7em;
+}
+
+.resource-articles_load-more-btn {
+	margin-bottom: 2.9em;
+}

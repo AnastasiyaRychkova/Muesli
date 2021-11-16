@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="./main-styles.css">
 </head>
 <body class="default-structure">
+	<noscript><div><img src="https://mc.yandex.ru/watch/86474172" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<nav class="tabbar">
 		<ul class="tabbar_buttons-list">
 			<li class="tabbar-button">
@@ -25,7 +26,7 @@
 			<li class="tabbar-button">
 				<a href="" class="tabbar-button_caption">
 					<div class="tabbar-button_icon saved-icon">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
 							<path d="M19.125 20.7749L12.0675 14.6249C12.0033 14.578 11.9258 14.5527 11.8463 14.5527C11.7667 14.5527 11.6892 14.578 11.625 14.6249L4.87502 20.7524C4.81931 20.7942 4.75306 20.8196 4.6837 20.8259C4.61434 20.8321 4.54461 20.819 4.48232 20.7878C4.42003 20.7567 4.36764 20.7088 4.33103 20.6496C4.29442 20.5903 4.27502 20.522 4.27502 20.4524V3.52866C4.27502 3.4292 4.31453 3.33382 4.38486 3.26349C4.45519 3.19316 4.55057 3.15366 4.65002 3.15366H19.335C19.4345 3.15366 19.5299 3.19316 19.6002 3.26349C19.6705 3.33382 19.71 3.4292 19.71 3.52866V20.4674C19.7095 20.5352 19.6905 20.6016 19.6552 20.6595C19.6199 20.7174 19.5695 20.7646 19.5095 20.7962C19.4495 20.8277 19.382 20.8424 19.3143 20.8387C19.2466 20.8349 19.1812 20.8129 19.125 20.7749V20.7749Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 							</svg>
 					</div>
@@ -61,10 +62,10 @@
 	</header>
 	<main class="page-content">
 		<section class="resource-recommendations">
-			<h2 class="header-5">Эти ресурсы могут быть вам полезны</h2>
-			<ul class="resource-list horizontal-scroll">
+			<h2><span class="header-5">Эти ресурсы могут быть вам полезны</span></h2>
+			<ul class="resource-list horizontal-scroll horizontal-scroll__full-width">
 				<li>
-					<a href="" class="resource-card">
+					<a href="../resource/medium.html" class="resource-card">
 						<div class="resource-card_info">
 							<div class="resource-card_icon">
 								<img src="" alt="">
@@ -77,7 +78,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="" class="resource-card">
+					<a href="../resource/medium.html" class="resource-card">
 						<div class="resource-card_info">
 							<div class="resource-card_icon">
 								<img src="" alt="">
@@ -90,7 +91,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="" class="resource-card">
+					<a href="../resource/medium.html" class="resource-card">
 						<div class="resource-card_info">
 							<div class="resource-card_icon">
 								<img src="" alt="">
@@ -103,7 +104,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="" class="resource-card">
+					<a href="../resource/medium.html" class="resource-card">
 						<div class="resource-card_info">
 							<div class="resource-card_icon">
 								<img src="" alt="">
@@ -118,7 +119,7 @@
 			</ul>
 		</section>
 		<section class="new-articles">
-			<h2 class="header-5">Новое из читаемых вами ресурсов</h2>
+			<h2><span class="header-5">Новое из читаемых вами ресурсов</span></h2>
 			<ul class="articles-list new-articles_list">
 				<li>
 					<a href="../article/index.html">
@@ -128,7 +129,9 @@
 									<img src="" alt="">
 								</div>
 								<span class="header-3 article_resource-name">vc.ru</span>
-								<time class="text-sb-normal article_publication-time">29 января 2020, 19:30</time>
+								<time class="article_publication-time article-page_publication-time" datetime="2020-01-22T19:30">
+									<span class="text-sb-normal">22 января 2020, 19:30</span>
+								</time>
 							</header>
 							<div class="article_preview">
 								<div class="article_preview-image">
@@ -156,7 +159,7 @@
 											<path d="M18.4098 9.50977L11.5898 13.4898" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
 									</button>
-									<button type="button" class="icon-btn article-btn article_favorites-btn" aria-label="Добавить в избранное">
+									<button type="button" class="icon-btn article-btn saved-btn article_saved-btn" aria-label="Добавить в избранное">
 										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M19.125 20.7749L12.0675 14.6249C12.0033 14.578 11.9258 14.5527 11.8463 14.5527C11.7667 14.5527 11.6892 14.578 11.625 14.6249L4.87502 20.7524C4.81931 20.7942 4.75306 20.8196 4.6837 20.8259C4.61434 20.8321 4.54461 20.819 4.48232 20.7878C4.42003 20.7567 4.36764 20.7088 4.33103 20.6496C4.29442 20.5903 4.27502 20.522 4.27502 20.4524V3.52866C4.27502 3.4292 4.31453 3.33382 4.38486 3.26349C4.45519 3.19316 4.55057 3.15366 4.65002 3.15366H19.335C19.4345 3.15366 19.5299 3.19316 19.6002 3.26349C19.6705 3.33382 19.71 3.4292 19.71 3.52866V20.4674C19.7095 20.5352 19.6905 20.6016 19.6552 20.6595C19.6199 20.7174 19.5695 20.7646 19.5095 20.7962C19.4495 20.8277 19.382 20.8424 19.3143 20.8387C19.2466 20.8349 19.1812 20.8129 19.125 20.7749V20.7749Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 											</svg>
@@ -181,7 +184,9 @@
 									<img src="" alt="">
 								</div>
 								<span class="header-3 article_resource-name">vc.ru</span>
-								<time class="text-sb-normal article_publication-time">29 января 2020, 19:30</time>
+								<time class="article_publication-time article-page_publication-time" datetime="2020-01-22T19:30">
+									<span class="text-sb-normal">22 января 2020, 19:30</span>
+								</time>
 							</header>
 							<div class="article_preview">
 								<div class="article_preview-image">
@@ -209,8 +214,8 @@
 											<path d="M18.4098 9.50977L11.5898 13.4898" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
 									</button>
-									<button type="button" class="icon-btn article-btn article_favorites-btn" aria-label="Добавить в избранное">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<button type="button" class="icon-btn article-btn saved-btn article_saved-btn saved-btn__saved" aria-label="Добавить в избранное">
+										<svg width="24" height="24" viewBox="0 0 24 24">
 											<path d="M19.125 20.7749L12.0675 14.6249C12.0033 14.578 11.9258 14.5527 11.8463 14.5527C11.7667 14.5527 11.6892 14.578 11.625 14.6249L4.87502 20.7524C4.81931 20.7942 4.75306 20.8196 4.6837 20.8259C4.61434 20.8321 4.54461 20.819 4.48232 20.7878C4.42003 20.7567 4.36764 20.7088 4.33103 20.6496C4.29442 20.5903 4.27502 20.522 4.27502 20.4524V3.52866C4.27502 3.4292 4.31453 3.33382 4.38486 3.26349C4.45519 3.19316 4.55057 3.15366 4.65002 3.15366H19.335C19.4345 3.15366 19.5299 3.19316 19.6002 3.26349C19.6705 3.33382 19.71 3.4292 19.71 3.52866V20.4674C19.7095 20.5352 19.6905 20.6016 19.6552 20.6595C19.6199 20.7174 19.5695 20.7646 19.5095 20.7962C19.4495 20.8277 19.382 20.8424 19.3143 20.8387C19.2466 20.8349 19.1812 20.8129 19.125 20.7749V20.7749Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 											</svg>
 									</button>
@@ -234,7 +239,9 @@
 									<img src="" alt="">
 								</div>
 								<span class="header-3 article_resource-name">vc.ru</span>
-								<time class="text-sb-normal article_publication-time">29 января 2020, 19:30</time>
+								<time class="article_publication-time article-page_publication-time" datetime="2020-01-22T19:30">
+									<span class="text-sb-normal">22 января 2020, 19:30</span>
+								</time>
 							</header>
 							<div class="article_preview">
 								<div class="article_preview-image">
@@ -262,8 +269,8 @@
 											<path d="M18.4098 9.50977L11.5898 13.4898" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
 									</button>
-									<button type="button" class="icon-btn article-btn article_favorites-btn" aria-label="Добавить в избранное">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<button type="button" class="icon-btn article-btn saved-btn article_saved-btn" aria-label="Добавить в избранное">
+										<svg width="24" height="24" viewBox="0 0 24 24">
 											<path d="M19.125 20.7749L12.0675 14.6249C12.0033 14.578 11.9258 14.5527 11.8463 14.5527C11.7667 14.5527 11.6892 14.578 11.625 14.6249L4.87502 20.7524C4.81931 20.7942 4.75306 20.8196 4.6837 20.8259C4.61434 20.8321 4.54461 20.819 4.48232 20.7878C4.42003 20.7567 4.36764 20.7088 4.33103 20.6496C4.29442 20.5903 4.27502 20.522 4.27502 20.4524V3.52866C4.27502 3.4292 4.31453 3.33382 4.38486 3.26349C4.45519 3.19316 4.55057 3.15366 4.65002 3.15366H19.335C19.4345 3.15366 19.5299 3.19316 19.6002 3.26349C19.6705 3.33382 19.71 3.4292 19.71 3.52866V20.4674C19.7095 20.5352 19.6905 20.6016 19.6552 20.6595C19.6199 20.7174 19.5695 20.7646 19.5095 20.7962C19.4495 20.8277 19.382 20.8424 19.3143 20.8387C19.2466 20.8349 19.1812 20.8129 19.125 20.7749V20.7749Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 											</svg>
 									</button>
@@ -274,7 +281,7 @@
 											<path d="M5 23C5.55228 23 6 22.5523 6 22C6 21.4477 5.55228 21 5 21C4.44772 21 4 21.4477 4 22C4 22.5523 4.44772 23 5 23Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
 									</button>
-								</ class="article-actions">
+								</div>
 							</footer>
 						</article>
 					</a>
@@ -424,5 +431,26 @@
 		</form>
 		<div class="modal-window_shadow"></div>
 	</aside>
+	<script type="text/javascript" >
+		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+		m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+	 
+		ym(86474172, "init", {
+			 clickmap:true,
+			 trackLinks:true,
+			 accurateTrackBounce:true,
+			 webvisor:true
+		});
+	 </script>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TG31FK1L4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-8TG31FK1L4');
+	</script>
 </body>
 </html>
