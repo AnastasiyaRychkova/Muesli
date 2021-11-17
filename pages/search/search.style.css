@@ -11,3 +11,11 @@
 .searching {
 	margin-top: 1em;
 }
+
+.found-articles__articles-list {
+	margin-bottom: 2.7em;
+}
+
+.found-articles__load-more-btn {
+	margin-bottom: 2.9em;
+}
