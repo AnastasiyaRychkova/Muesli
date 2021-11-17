@@ -632,5 +632,19 @@
 
 		gtag('config', 'G-8TG31FK1L4');
 	</script>
+
+	<script>
+		const targetBtn = document.querySelector('.saved-btn--saved');
+		
+		targetBtn.addEventListener(
+			'click',
+			( event ) => {
+				event.stopPropagation();
+				event.preventDefault();
+				ym(86474172,'reachGoal','save_first_article');
+			}
+		);
+	</script>
+
 </body>
 </html>

@@ -1,0 +1,13 @@
+.search-results__tabs-list {
+	margin: 2em 0;
+}
+
+.article-sort {
+	width: 21em;
+	box-sizing: border-box;
+	margin-bottom: 2em;
+}
+
+.searching {
+	margin-top: 1em;
+}
