@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Мюсли – Главная</title>
+	<link rel="stylesheet" href="../../styles/styles.css">
+	<link rel="stylesheet" href="./login.style.css">
+</head>
+
+<body class="default-structure default-structure--white vertical-align">
+	<div class="login-page">
+		<h1 class="login-page__header">
+			<span class="login-page__header-text">Вход</span>
+		</h1>
+		<form class="user-form--column" autocomplete="on" action="" method="post">
+			<fieldset class="user-form__fieldset--column login-page__user-data">
+				<div class="user-form__field">
+					<label for="email" class="user-form__label">
+						<span class="text-b-normal">E-mail</span>
+					</label>
+					<input class="user-form__input" type="email" name="login" id="email" placeholder="Введите ваш e-mail">
+				</div>
+				<div class="user-form__field">
+					<label for="" class="user-form__label">
+						<span class="text-b-normal">Пароль</span>
+					</label>
+					<input class="user-form__input" type="password" name="login" id="password" placeholder="Введите пароль">
+				</div>
+			</fieldset>
+			<div class="login-page__alt-login">
+				<div class="login-page__alt-login-header">
+					<span class="text-m-normal">Или войти с помощью:</span>
+				</div>
+				<div class="login-page__alt-login-sources">
+					<button class="login-page__alt-login-btn" type="button" aria-label="Google">
+						<svg class="login-page__google-icon" width="27" height="28" viewBox="0 0 27 28" fill="none">
+							<path d="M13.6481 0C6.11113 0 0 6.15925 0 13.756C0 21.3527 6.11113 27.512 13.6481 27.512C25.0293 27.512 27.5933 16.8591 26.5257 11.4633H25.0134H22.4353H13.6437V16.0487H22.4419C21.4305 20.0015 17.88 22.9267 13.6437 22.9267C8.62054 22.9267 4.5479 18.8205 4.5479 13.756C4.5479 8.69149 8.62054 4.58533 13.6437 4.58533C15.9279 4.58533 18.0087 5.44021 19.6062 6.84217L22.8372 3.58677C20.4109 1.3583 17.1875 0 13.6481 0Z" fill="currentColor"/>
+						</svg>
+					</button>
+					<button class="login-page__alt-login-btn" type="button" aria-label="Apple">
+						<svg class="login-page__apple-icon" width="26" height="32" viewBox="0 0 26 32" fill="none">
+							<g clip-path="url(#clip0_241_20910)">
+								<path d="M24.8492 11.201C24.7113 11.2891 21.4273 13.1493 21.4273 17.2737C21.5821 21.9773 25.5715 23.6269 25.64 23.6269C25.5715 23.715 25.0377 25.874 23.4563 28.1371C22.2012 30.0865 20.8082 32.052 18.693 32.052C16.6809 32.052 15.9586 30.7527 13.6369 30.7527C11.1437 30.7527 10.4382 32.052 8.5293 32.052C6.41402 32.052 4.91785 29.9812 3.5944 28.0501C1.87504 25.5225 0.413634 21.5561 0.362042 17.7476C0.327273 15.7295 0.706363 13.7457 1.66867 12.0607C3.02689 9.70828 5.45172 8.1114 8.09974 8.05875C10.1287 7.98892 11.9344 9.48048 13.1726 9.48048C14.3592 9.48048 16.5777 8.05875 19.0877 8.05875C20.1712 8.05989 23.0603 8.393 24.8492 11.201ZM13.001 7.65581C12.6399 5.81282 13.6369 3.96982 14.5656 2.7942C15.7522 1.37247 17.6263 0.407471 19.2425 0.407471C19.3457 2.25046 18.6918 4.05797 17.5232 5.37439C16.4745 6.79613 14.6688 7.86644 13.001 7.65581Z" fill="currentColor"/>
+							</g>
+							<defs>
+								<clipPath id="clip0_241_20910">
+								<rect width="26" height="32" fill="white"/>
+								</clipPath>
+							</defs>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="login-page__actions">
+				<button class="main-action-btn login-page__primary-btn" type="submit" name="login" disabled>
+					<span class="text-b-big">Войти</span>
+				</button>
+				<button class="additional-action-btn login-page__secondary-btn" type="button">
+					<span class="text-b-big">Регистрация</span>
+				</button>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
