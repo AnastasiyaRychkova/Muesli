@@ -3,9 +3,9 @@
 }
 
 .article-sort {
-	width: 21em;
 	box-sizing: border-box;
 	margin-bottom: 2em;
+	width: 21em;
 }
 
 .searching {
@@ -23,4 +23,26 @@
 
 .found-resource__resource-list {
 	margin-top: 3em;
+}
+
+
+
+
+/*----------  No Results  ----------*/
+
+.no-results {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 3.5em;
+}
+
+.no-results__img {
+	margin: 3.8em 0;
+	height: 34%;
+}
+
+.no-results__message {
+	width: 23em;
+	text-align: center;
 }

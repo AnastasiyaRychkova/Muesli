@@ -10,7 +10,7 @@ class TabsHandler
 	/** @type {HTMLInputElement} */
 	#currentTabInput;
 	
-	CLOSE_TAB_CLASS = 'tab__content--hide';
+	CLOSE_TAB_CLASS = 'hidden';
 
 	constructor( tabListSelector )
 	{

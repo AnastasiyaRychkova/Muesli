@@ -218,6 +218,10 @@ input {
 =                  Structure                  =
 =============================================*/
 
+.hidden {
+	display: none !important;
+}
+
 
 /*----------  Default  ----------*/
 
@@ -877,12 +881,6 @@ input.tab__input:checked + label.tab__title > span {
 input.tab__input:checked + label.tab__title {
 	border-bottom: 1.5px solid var(--black);
 }
-
-.tab__content--hide
-{
-	display: none !important;
-}
-
 
 
 /*----------  Search  ----------*/
