@@ -594,6 +594,47 @@ ul.articles-list {
 
 
 
+/*----------  Resource  ----------*/
+
+.resource-list-item {
+	display: flex;
+	column-gap: 2em;
+	padding: 0;
+}
+
+.resource-list-item__cover {
+	width: 5em;
+	height: 5em;
+	border-radius: 50%;
+	background-color: var(--control-elements-background);
+	flex-shrink: 0;
+}
+
+.resource-list-item__name {
+	height: 4,2em;
+	display: flex;
+	align-items: flex-end;
+	padding-right: 4em;
+}
+
+.resource-list-item__description {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	row-gap: 1em;
+}
+
+.resource-list-item__subscribes {
+	color: var(--grey);
+}
+
+
+.resource-list-item__subscribe-btn {
+	width: 15em;
+}
+
+
+
 /*----------  Views Widget  ----------*/
 
 .views {
