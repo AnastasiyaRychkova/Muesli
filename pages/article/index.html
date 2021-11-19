@@ -67,6 +67,7 @@
 			</button>
 		</div>
 	</header>
+
 	<main class="page-content">
 		<section class="article-page">
 			<div class="resource-info">
@@ -120,16 +121,48 @@
 			<h2><span class="header-5">Вам также может понравиться</span></h2>
 			<ul class="horizontal-scroll horizontal-scroll--full-width recommendations__list">
 				<li class="recommended-article">
-					<div class="recommended-article__cover">
-						<img src="" alt="">
-					</div>
-					<div class="recommended-article__header">
-						<span class="header-4 multi-line--3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</span>
-					</div>
-					<div class="recommended-article__footer">
-						<div class="recommended-article__resource">
-							<span class="text-sb-normal">vc.ru</span>
+					<a class="recommended-article__info" href="../article/index.html">
+						<div class="recommended-article__cover">
+							<img src="" alt="">
 						</div>
+						<div class="recommended-article__header">
+							<span class="header-4 multi-line--3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</span>
+						</div>
+					</a>
+					<div class="recommended-article__footer">
+						<a href="../resource/vc.html" class="recommended-article__resource">
+							<span class="text-sb-normal">vc.ru</span>
+						</a>
+						<div class="recommended-article__actions">
+							<button type="button" class="icon-btn article-btn saved-btn recommended-article__saved-btn" aria-label="Добавить в избранное" aria-pressed="false">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<path d="M19.125 20.7749L12.0675 14.6249C12.0033 14.578 11.9258 14.5527 11.8463 14.5527C11.7667 14.5527 11.6892 14.578 11.625 14.6249L4.87502 20.7524C4.81931 20.7942 4.75306 20.8196 4.6837 20.8259C4.61434 20.8321 4.54461 20.819 4.48232 20.7878C4.42003 20.7567 4.36764 20.7088 4.33103 20.6496C4.29442 20.5903 4.27502 20.522 4.27502 20.4524V3.52866C4.27502 3.4292 4.31453 3.33382 4.38486 3.26349C4.45519 3.19316 4.55057 3.15366 4.65002 3.15366H19.335C19.4345 3.15366 19.5299 3.19316 19.6002 3.26349C19.6705 3.33382 19.71 3.4292 19.71 3.52866V20.4674C19.7095 20.5352 19.6905 20.6016 19.6552 20.6595C19.6199 20.7174 19.5695 20.7646 19.5095 20.7962C19.4495 20.8277 19.382 20.8424 19.3143 20.8387C19.2466 20.8349 19.1812 20.8129 19.125 20.7749V20.7749Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+									</svg>
+							</button>
+							<button type="button" class="icon-btn article-btn recommended-article__more-btn" aria-label="Показать дополнительные опции">
+								<svg width="10" height="30" viewBox="0 0 10 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5 16C5.55228 16 6 15.5523 6 15C6 14.4477 5.55228 14 5 14C4.44772 14 4 14.4477 4 15C4 15.5523 4.44772 16 5 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M5 9C5.55228 9 6 8.55228 6 8C6 7.44772 5.55228 7 5 7C4.44772 7 4 7.44772 4 8C4 8.55228 4.44772 9 5 9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M5 23C5.55228 23 6 22.5523 6 22C6 21.4477 5.55228 21 5 21C4.44772 21 4 21.4477 4 22C4 22.5523 4.44772 23 5 23Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+							</button>
+						</div>
+					</div>
+				</li>
+				
+				<li class="recommended-article">
+					<a class="recommended-article__info" href="../article/index.html">
+						<div class="recommended-article__cover">
+							<img src="" alt="">
+						</div>
+						<div class="recommended-article__header">
+							<span class="header-4 multi-line--3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</span>
+						</div>
+					</a>
+					<div class="recommended-article__footer">
+						<a href="../resource/vc.html" class="recommended-article__resource">
+							<span class="text-sb-normal">vc.ru</span>
+						</a>
 						<div class="recommended-article__actions">
 							<button type="button" class="icon-btn article-btn saved-btn recommended-article__saved-btn" aria-label="Добавить в избранное" aria-pressed="false">
 								<svg width="24" height="24" viewBox="0 0 24 24">
@@ -147,16 +180,18 @@
 					</div>
 				</li>
 				<li class="recommended-article">
-					<div class="recommended-article__cover">
-						<img src="" alt="">
-					</div>
-					<div class="recommended-article__header">
-						<span class="header-4 multi-line--3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</span>
-					</div>
-					<div class="recommended-article__footer">
-						<div class="recommended-article__resource">
-							<span class="text-sb-normal">vc.ru</span>
+					<a class="recommended-article__info" href="../article/index.html">
+						<div class="recommended-article__cover">
+							<img src="" alt="">
 						</div>
+						<div class="recommended-article__header">
+							<span class="header-4 multi-line--3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</span>
+						</div>
+					</a>
+					<div class="recommended-article__footer">
+						<a href="../resource/vc.html" class="recommended-article__resource">
+							<span class="text-sb-normal">vc.ru</span>
+						</a>
 						<div class="recommended-article__actions">
 							<button type="button" class="icon-btn article-btn saved-btn recommended-article__saved-btn" aria-label="Добавить в избранное" aria-pressed="false">
 								<svg width="24" height="24" viewBox="0 0 24 24">
@@ -174,43 +209,18 @@
 					</div>
 				</li>
 				<li class="recommended-article">
-					<div class="recommended-article__cover">
-						<img src="" alt="">
-					</div>
-					<div class="recommended-article__header">
-						<span class="header-4 multi-line--3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</span>
-					</div>
+					<a class="recommended-article__info" href="../article/index.html">
+						<div class="recommended-article__cover">
+							<img src="" alt="">
+						</div>
+						<div class="recommended-article__header">
+							<span class="header-4 multi-line--3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</span>
+						</div>
+					</a>
 					<div class="recommended-article__footer">
-						<div class="recommended-article__resource">
+						<a href="../resource/vc.html" class="recommended-article__resource">
 							<span class="text-sb-normal">vc.ru</span>
-						</div>
-						<div class="recommended-article__actions">
-							<button type="button" class="icon-btn article-btn saved-btn recommended-article__saved-btn" aria-label="Добавить в избранное" aria-pressed="false">
-								<svg width="24" height="24" viewBox="0 0 24 24">
-									<path d="M19.125 20.7749L12.0675 14.6249C12.0033 14.578 11.9258 14.5527 11.8463 14.5527C11.7667 14.5527 11.6892 14.578 11.625 14.6249L4.87502 20.7524C4.81931 20.7942 4.75306 20.8196 4.6837 20.8259C4.61434 20.8321 4.54461 20.819 4.48232 20.7878C4.42003 20.7567 4.36764 20.7088 4.33103 20.6496C4.29442 20.5903 4.27502 20.522 4.27502 20.4524V3.52866C4.27502 3.4292 4.31453 3.33382 4.38486 3.26349C4.45519 3.19316 4.55057 3.15366 4.65002 3.15366H19.335C19.4345 3.15366 19.5299 3.19316 19.6002 3.26349C19.6705 3.33382 19.71 3.4292 19.71 3.52866V20.4674C19.7095 20.5352 19.6905 20.6016 19.6552 20.6595C19.6199 20.7174 19.5695 20.7646 19.5095 20.7962C19.4495 20.8277 19.382 20.8424 19.3143 20.8387C19.2466 20.8349 19.1812 20.8129 19.125 20.7749V20.7749Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-									</svg>
-							</button>
-							<button type="button" class="icon-btn article-btn recommended-article__more-btn" aria-label="Показать дополнительные опции">
-								<svg width="10" height="30" viewBox="0 0 10 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M5 16C5.55228 16 6 15.5523 6 15C6 14.4477 5.55228 14 5 14C4.44772 14 4 14.4477 4 15C4 15.5523 4.44772 16 5 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									<path d="M5 9C5.55228 9 6 8.55228 6 8C6 7.44772 5.55228 7 5 7C4.44772 7 4 7.44772 4 8C4 8.55228 4.44772 9 5 9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									<path d="M5 23C5.55228 23 6 22.5523 6 22C6 21.4477 5.55228 21 5 21C4.44772 21 4 21.4477 4 22C4 22.5523 4.44772 23 5 23Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-							</button>
-						</div>
-					</div>
-				</li>
-				<li class="recommended-article">
-					<div class="recommended-article__cover">
-						<img src="" alt="">
-					</div>
-					<div class="recommended-article__header">
-						<span class="header-4 multi-line--3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</span>
-					</div>
-					<div class="recommended-article__footer">
-						<div class="recommended-article__resource">
-							<span class="text-sb-normal">vc.ru</span>
-						</div>
+						</a>
 						<div class="recommended-article__actions">
 							<button type="button" class="icon-btn article-btn saved-btn recommended-article__saved-btn" aria-label="Добавить в избранное" aria-pressed="false">
 								<svg width="24" height="24" viewBox="0 0 24 24">
@@ -230,6 +240,8 @@
 			</ul>
 		</section>
 	</main>
+
+
 	<script type="text/javascript" >
 		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 		m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
