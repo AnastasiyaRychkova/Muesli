@@ -1,0 +1,65 @@
+.searching {
+	margin-top: 1em;
+	margin-bottom: 3em;
+}
+
+.create-folder-btn {
+	width: 100%;
+	padding: 2.8em;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: .8em;
+	border-image: repeating-linear-gradient(45deg, transparent,
+		transparent 1em,
+		var(--grey) 1em,
+		var(--grey) 2em) 1;
+	color: var(--grey);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.create-folder-btn__icon {
+	margin-right: 1em;
+}
+
+
+.folder-list {
+	margin: 3em 0;
+}
+
+.folder-item__cover > .folder-preview {
+	width: 11em;
+	height: 11em;
+}
+
+.folder-item__folder-info,
+.folder-item__header {
+	display: flex;
+}
+
+.folder-item__folder-info {
+	margin-bottom: 1.2em;
+}
+
+.folder-item__description {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1em;
+}
+
+.folder-item__folder-name {
+	flex-grow: 1;
+}
+
+.folder-item__more-btn,
+.folder-item__comments,
+.folder-item__articles-count {
+	color: var(--grey);
+}
+
+.folder-item__articles-count {
+	display: flex;
+	align-items: center;
+	column-gap: .3em;
+}
