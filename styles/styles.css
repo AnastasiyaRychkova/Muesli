@@ -252,7 +252,8 @@ input {
 .page-content {
 	box-sizing: border-box;
 	width: 100%;
-	min-height: calc( 100vh - 14em );
+	min-height: calc( 100vh - 13.4em );
+	height: 1px;
 	padding: 0 var(--page-padding);
 }
 /* TOTHINK: Убирать scrollbar контейнера с контентом? */
@@ -636,10 +637,10 @@ ul.list {
 
 .resource-list-item {
 	display: flex;
-	flex-direction: column;
 	align-self: stretch;
-	row-gap: 1em;
+	flex-direction: column;
 	padding: 0;
+	row-gap: 1em;
 }
 
 .resource-list-item__info {
@@ -666,8 +667,8 @@ ul.list {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-	row-gap: 1em;
 	padding-top: .4em;
+	row-gap: 1em;
 }
 
 .resource-list-item__subscribes {
@@ -964,10 +965,13 @@ input.search-form__input::-webkit-search-cancel-button {
 	color: var(--grey);
 }
 
+/* --- Text Input --- */
+
 .user-form__input {
 	padding-bottom: .8em;
 	border: none;
 	border-bottom: 1.5px solid var(--black);
+	background-color: transparent;
 	line-height: 1.22em;
 	
 	font-family: var(--text-font);
@@ -982,6 +986,47 @@ input.search-form__input::-webkit-search-cancel-button {
 
 .user-form__input:focus {
 	outline: none;
+}
+
+
+/* --- Radio Buttons --- */
+
+.user-form__radios {
+	list-style: none;
+	padding: 1em 0;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1em;
+}
+
+input[type="radio"].user-form__radio-btn {
+	display: none;
+}
+
+.user-form__radio-label {
+	display: flex;
+	align-items: center;
+	column-gap: 1em;
+}
+
+.user-form__radio-label-text {
+	display: block;
+}
+
+.user-form__radio-label::before {
+	content: '';
+	display: block;
+	width: 1.6em;
+	height: 1.6em;
+	padding: .4em;
+	border: .3em solid var(--black);
+	background-color: transparent;
+	background-clip: content-box;
+	border-radius: 50%;
+}
+
+input[type="radio"].user-form__radio-btn:checked + .user-form__radio-label::before {
+	background-color: var(--black);
 }
 
 

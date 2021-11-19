@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Мюсли – Профиль</title>
+	<title>Мюсли – Настройки профиля</title>
 	<link rel="stylesheet" href="../../styles/styles.css">
-	<link rel="stylesheet" href="./profile.style.css">
+	<link rel="stylesheet" href="./profile-settings.style.css">
 </head>
 <body class="default-structure">
 	<noscript>
@@ -16,47 +16,50 @@
 	</noscript>
 	
 	<header class="page-header page-header--scrolled page-header--text-only">
-		<h1 class="header-1">Профиль</h1>
+		<h1 class="header-1">Настройки профиля</h1>
 	</header>
 
 	<main class="page-content">
-		<section class="user-profile">
-			<div class="user-profile__avatar">
-				<img src="../../img/content/ava.jpg" alt="Юная девушка со светлыми волосами в лучах солнечного света">
+		<form class="user-form--column profile-settings" autocomplete="off">
+			<fieldset class="user-form__fieldset--column profile-settings__user-data">
+				<div class="user-form__field">
+					<label for="user-name" class="user-form__label">
+						<span class="text-b-normal">Имя</span>
+					</label>
+					<input class="user-form__input" type="text" name="user-name" id="user-name" placeholder="Введите новый имя" value="Мария Александрова">
+				</div>
+				<div class="user-form__field">
+					<label for="email" class="user-form__label">
+						<span class="text-b-normal">E-mail</span>
+					</label>
+					<input class="user-form__input" type="email" name="email" id="email" placeholder="Введите новый e-mail" value="marialexandrova@gmail.com">
+				</div>
+				<div class="user-form__field">
+					<div class="user-form__label">
+						<span class="text-b-normal">Пол</span>
+					</div>
+					<ul class="user-form__radios">
+						<li class="user-form__input-variant">
+							<input class="user-form__radio-btn" type="radio" name="sex" id="female" checked>
+							<label class="user-form__radio-label" for="female">
+								<span class="text-m-normal user-form__radio-label-text">Женский</span>
+							</label>
+						</li>
+						<li class="user-form__input-variant">
+							<input class="user-form__radio-btn" type="radio" name="sex" id="male">
+							<label class="user-form__radio-label" for="male">
+								<span class="text-m-normal">Мужской</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</fieldset>
+			<div class="profile-settings__actions">
+				<button class="main-action-btn profile-settings__primary-btn" type="submit" name="login">
+					<span class="text-b-big">Сохранить</span>
+				</button>
 			</div>
-			<h2>
-				<span class="header-2">Мария Александрова</span>
-			</h2>
-		</section>
-		<nav class="settings">
-			<ul class="settings__list">
-				<li class="settings__item settings__item--advanced">
-					<a href="./profile_settings.html">
-						<span class="header-5">Настройки профиля</span>
-					</a>
-				</li>
-				<li class="settings__item settings__item--advanced">
-					<a href="#">
-						<span class="header-5">Настройки ленты</span>
-					</a>
-				</li>
-				<li class="settings__item settings__item--advanced">
-					<a href="#">
-						<span class="header-5">Условия и конфиденциальность</span>
-					</a>
-				</li>
-				<li class="settings__item">
-					<a href="#">
-						<span class="header-5">Помощь</span>
-					</a>
-				</li>
-				<li class="settings__item">
-					<a href="../login/index.html">
-						<span class="header-5">Выход</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
+		</form>
 	</main>
 
 	<nav class="tabbar">
@@ -94,7 +97,7 @@
 				</a>
 			</li>
 			<li class="tabbar-button">
-				<div class="tabbar-button__caption">
+				<a href="./index.html" class="tabbar-button__caption">
 					<div class="tabbar-button__icon profile-icon">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -102,7 +105,7 @@
 							</svg>
 					</div>
 					<span class="tabbar-button__name text-b-small">Профиль</span>
-				</div>
+				</a>
 			</li>
 		</ul>
 	</nav>

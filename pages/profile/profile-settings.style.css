@@ -1,0 +1,12 @@
+.page-content {
+	padding-top: var(--page-padding);
+	padding-bottom: 5em;
+}
+
+.profile-settings {
+	min-height: 100%;
+}
+
+.profile-settings__user-data {
+	flex-grow: 1;
+}
