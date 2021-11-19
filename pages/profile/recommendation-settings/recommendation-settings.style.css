@@ -1,0 +1,23 @@
+.page-content {
+	padding-top: 1em;
+	padding-bottom: 3em;
+}
+
+.instructions {
+	color: var(--grey);
+	margin-bottom: 3.6em;
+}
+
+.settings__tabs-list {
+	margin-bottom: 3em;
+}
+
+.folders-setting__item {
+	display: flex;
+	align-items: flex-start;
+	column-gap: 1em;
+}
+
+.folders-setting__folder-name {
+	flex-grow: 1;
+}

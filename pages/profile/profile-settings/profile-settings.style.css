@@ -1,6 +1,7 @@
 .page-content {
 	padding-top: var(--page-padding);
 	padding-bottom: 5em;
+	height: 1px;
 }
 
 .profile-settings {

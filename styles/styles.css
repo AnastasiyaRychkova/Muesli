@@ -89,6 +89,7 @@ fieldset {
 
 input {
 	font-size: inherit;
+	background-color: transparent;
 }
 
 /*=====  End of Reset Default  ======*/
@@ -253,7 +254,6 @@ input {
 	box-sizing: border-box;
 	width: 100%;
 	min-height: calc( 100vh - 13.4em );
-	height: 1px;
 	padding: 0 var(--page-padding);
 }
 /* TOTHINK: Убирать scrollbar контейнера с контентом? */
@@ -735,10 +735,61 @@ li.tag-item {
 	text-transform: lowercase;
 }
 
-li.tag-item--system {
+ul.tags-list--system > .tag-item {
 	border: none;
 	background-color: var(--control-elements-background);
 	color: var(--grey);
+}
+
+/* --- Editable Tags --- */
+
+ul.editable-tags-list {
+	gap: 1.5em;
+}
+
+ul.editable-tags-list > .tag-item {
+	padding: 0 1em;
+	height: 4em;
+	display: flex;
+	align-items: center;
+	column-gap: 1em;
+	border-radius: 1em;
+}
+
+ul.editable-tags-list--dark > .tag-item {
+	background-color: var(--black);
+	color: var(--white);
+}
+
+ul.editable-tags-list--dark > .tag-item--editing {
+	background-color: var(--control-elements-background);
+	color: var(--black);
+}
+
+ul.editable-tags-list--dark > .tag-item--new {
+	background-color: var(--control-elements-background);
+	color: var(--grey);
+}
+
+.editable-tag__btn {
+	border-radius: 50%;
+	color: inherit;
+	padding: 0;
+}
+
+.editable-tag__btn > svg {
+	width: 2.4em;
+	height: 2.4em;
+}
+
+.tag-item--new > .editable-tag__btn {
+	transform: rotate(45deg);
+	transform-origin: center;
+}
+
+.tag-item--editing > span:focus {
+	outline: none;
+	border: none;
 }
 
 
@@ -971,7 +1022,6 @@ input.search-form__input::-webkit-search-cancel-button {
 	padding-bottom: .8em;
 	border: none;
 	border-bottom: 1.5px solid var(--black);
-	background-color: transparent;
 	line-height: 1.22em;
 	
 	font-family: var(--text-font);
@@ -992,10 +1042,10 @@ input.search-form__input::-webkit-search-cancel-button {
 /* --- Radio Buttons --- */
 
 .user-form__radios {
-	list-style: none;
-	padding: 1em 0;
 	display: flex;
 	flex-direction: column;
+	padding: 1em 0;
+	list-style: none;
 	row-gap: 1em;
 }
 
@@ -1014,20 +1064,59 @@ input[type="radio"].user-form__radio-btn {
 }
 
 .user-form__radio-label::before {
-	content: '';
 	display: block;
 	width: 1.6em;
 	height: 1.6em;
 	padding: .4em;
 	border: .3em solid var(--black);
-	background-color: transparent;
-	background-clip: content-box;
 	border-radius: 50%;
+	background-clip: content-box;
+	background-color: transparent;
+	content: '';
 }
 
 input[type="radio"].user-form__radio-btn:checked + .user-form__radio-label::before {
 	background-color: var(--black);
 }
+
+
+
+/*----------  Switcher  ----------*/
+
+input[type="checkbox"].switcher__input {
+	appearance: none;
+	position: relative;
+	display: block;
+	width: 5.4em;
+	height: 3em;
+	margin: 0;
+	background: var(--control-elements-background);
+	border-radius: 30px;
+	outline: none;
+}
+
+.switcher__input::after {
+	content: "";
+	
+	display: block;
+	position: absolute;
+	left: .3em;
+	top: .3em;
+	
+	width: 2.4em;
+	height: 2.4em;
+	background-color: var(--grey);
+	border-radius: 50%;
+	
+	transform: translateX(0);
+	transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+
+.switcher__input:checked::after {
+	transform: translateX(100%);
+	background-color: var(--yellow);
+}
+
 
 
 /*----------  Modal Window  ----------*/
@@ -1133,6 +1222,7 @@ input[type=radio]:checked + label.folder-selection__item {
 
 .folder-preview {
 	display: flex;
+	flex-shrink: 0;
 	flex-wrap: wrap;
 	margin-right: 1em;
 	width: 8em;
