@@ -5,19 +5,19 @@
 
 .user-profile {
 	display: flex;
-	column-gap: 1em;
 	align-items: center;
+	column-gap: 1em;
 	margin-top: 4em;
 	margin-bottom: 6em;
 }
 
 .user-profile__avatar {
-	background-color: var(--control-elements-background);
-	border-radius: 50%;
-	overflow: hidden;
+	flex-shrink: 0;
 	width: 11em;
 	height: 11em;
-	flex-shrink: 0;
+	overflow: hidden;
+	border-radius: 50%;
+	background-color: var(--control-elements-background);
 }
 
 
@@ -27,28 +27,29 @@
 
 
 .settings__list {
-	list-style: none;
-	padding: 0;
 	display: flex;
-	flex-direction: column;
 	align-items: stretch;
+	flex-direction: column;
+	padding: 0;
+	list-style: none;
 	row-gap: 1em;
 }
 
 .settings__item {
-	background-color: var(--white);
 	padding: 1.9em 2em 2.1em;
+	border-radius: .5em;
+	background-color: var(--white);
+	display: block;
 }
 
 .settings__item--advanced {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 	column-gap: 1em;
 }
 
 .settings__item--advanced::after {
-	content: '';
 	display: block;
 	width: .8em;
 	height: .8em;
@@ -56,4 +57,5 @@
 	border-right: 2px solid var(--black);
 	border-top-left-radius: 2px;
 	transform: rotate(45deg) translate(20%, 0%);
+	content: '';
 }
