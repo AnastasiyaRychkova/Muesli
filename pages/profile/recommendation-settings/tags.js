@@ -10,14 +10,14 @@ function initTagsList()
 			/** @type {HTMLElement} */
 			const target = event.target;
 			console.log( 'X' );
-			if( target.closest( '.editable-tag__btn' ) )
+			if( target.closest( '.editable-tag__btn' ) ) // нажата кнопка
 			{
 				const tag = target.closest( '.tag-item' );
 				
-				if( tag.classList.contains( 'tag-item--new' ) )
-					createTag( tag );
+				if( tag.classList.contains( 'tag-item--new' ) ) // [+]
+					createTag( tag, tagsList );
 				else
-					deleteTag( tag, tagsList );
+					deleteTag( tag, tagsList ); // [x]
 			}
 		}
 	);
@@ -49,9 +49,10 @@ function createTag( tag, tagsList )
 function makeTagEditable( tag, tagsList )
 {
 	/** @type {HTMLElement} */
-	const textField = createTagEditableText();
+	const textField = createEditableTextForTag();
 	tag.prepend( textField );
 	tag.classList.add( 'tag-item--editing' );
+	tag.classList.remove( 'tag-item--new' );
 	textField.focus();
 
 	textField.addEventListener(
@@ -59,11 +60,11 @@ function makeTagEditable( tag, tagsList )
 		() => {
 			if( textField.textContent === '' )
 			{
-				deleteTag( tag );
+				deleteTag( tag, tagsList );
 				return;
 			}
 			makeTagStatic( tag );
-			tagsList.
+			tagsList.append( createAddTagButton( tag ) );
 		},
 		{
 			once: true,
@@ -74,7 +75,7 @@ function makeTagEditable( tag, tagsList )
 /**
  * @returns HTMLElement
  */
-function createTagEditableText()
+function createEditableTextForTag()
 {
 	const span = document.createElement( 'span' );
 	span.classList.add( 'text-tag-label' );
@@ -90,6 +91,23 @@ function makeTagStatic( tag )
 	tag.classList.remove( 'tag-item--editing' );
 	tag.querySelector( 'span' ).contentEditable = false;
 }
+
+/**
+ * @param {HTMLElement} prevTag
+ * @returns {HTMLElement}
+ */
+function createAddTagButton( prevTag )
+{
+	const addButton = prevTag.querySelector( 'button' ).cloneNode( true );
+
+	const tag = document.createElement( 'li' );
+	tag.classList.add( 'tag-item', 'tag-item--new' );
+	tag.append( addButton );
+
+	return tag;
+}
+
+
 
 
 initTagsList();
