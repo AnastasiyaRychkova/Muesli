@@ -1,2 +1,7 @@
 # Muesli
-Layout of a mobile application for saving and reading articles on the Internet and receiving recommendations
+Приложение для сохранения и чтения статей в Интернете, а также для получения рекомендации на основе читаемых источников.
+
+
+## Материалы по проекту
+* [🔗 Документация](https://www.notion.so/Article-2331f073757440ffbe25b29fd0587bf6)
+* [🔗 Макеты экранов](https://www.figma.com/file/Wh5qLqa8YHIvTrMeUDcu42/%D0%A1%D0%9F%D0%A1-%D0%92%D0%98?node-id=351%3A26643)

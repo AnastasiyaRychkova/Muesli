@@ -29,6 +29,11 @@
 	height: 6em;
 	border-radius: 50%;
 	background-color: var(--control-elements-background);
+	overflow: hidden;
+}
+
+.resource-presentation__cover > img {
+	width: 100%;
 }
 
 .resource-presentation__description {

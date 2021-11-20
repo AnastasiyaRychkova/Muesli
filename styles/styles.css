@@ -475,9 +475,14 @@ button.page-header__back-btn {
 	margin-right: 1em;
 	width: 4em;
 	height: 4em;
+	overflow: hidden;
 	border-radius: 50%;
 
 	background-color: var(--control-elements-background);
+}
+
+.resource-card__icon > img {
+	width: 100%;
 }
 
 .resource-card__name {
@@ -558,8 +563,13 @@ ul.list {
 .article__resource-icon {
 	width: 3em;
 	height: 3em;
+	overflow: hidden;
 	border-radius: 50%;
 	background-color: var(--control-elements-background);
+}
+
+.article__resource-icon > img {
+	width: 100%;
 }
 
 .article__resource-name {
@@ -580,8 +590,15 @@ ul.list {
 	flex-basis: 11em;
 	flex-shrink: 0;
 	height: 8em;
+	overflow: hidden;
 	border-radius: .5em;
 	background-color: var(--control-elements-background);
+}
+
+.article__preview-image > img {
+	margin-left: -1.2em;
+	min-width: 100%;
+	height: 100%;
 }
 
 .article__preview-content {
@@ -664,8 +681,13 @@ ul.list {
 	flex-shrink: 0;
 	width: 5em;
 	height: 5em;
+	overflow: hidden;
 	border-radius: 50%;
 	background-color: var(--control-elements-background);
+}
+
+.resource-list-item__cover > img {
+	width: 100%;
 }
 
 .resource-list-item__name {
@@ -1244,6 +1266,11 @@ input[type=radio]:checked + label.folder-selection__item {
 .folder-preview__article {
 	width: 50%;
 	height: 50%;
+	overflow: hidden;
+}
+
+.folder-preview__article > img {
+	width: 100%;
 }
 
 /* FIXME: Временная заглушка вместо фотографий */

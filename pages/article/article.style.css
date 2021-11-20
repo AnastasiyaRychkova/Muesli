@@ -7,11 +7,11 @@
 
 .read-text {
 	--article-font: 'Inter', sans-serif;
-	font-size: 1.7em;
 	line-height: 1.24em;
 	font-family: var(--article-font);
-	font-style: normal;
+	font-size: 1.7em;
 	font-weight: normal;
+	font-style: normal;
 }
 
 .article-page p {
@@ -40,14 +40,18 @@
 	background-color: var(--control-elements-background);
 }
 
+.resource-info__icon > img {
+	width: 100%;
+}
+
 .resource-info__name {
 	flex-shrink: 1;
 }
 
 .cover {
 	box-sizing: border-box;
-	margin-left: calc(-1 * var(--page-padding));
 	margin-bottom: 2em;
+	margin-left: calc(-1 * var(--page-padding));
 	width: 100vw;
 	height: 16em;
 	overflow: hidden;
@@ -94,23 +98,27 @@
 
 .recommended-article {
 	display: flex;
-	flex-direction: column;
 	align-items: stretch;
+	flex-direction: column;
 }
 
 .recommended-article__cover {
+	margin-bottom: 1em;
 	width: 17em;
 	height: 10em;
-	background-color: var(--control-elements-background);
-	border-radius: .5em;
-	margin-bottom: 1em;
 	overflow: hidden;
+	border-radius: .5em;
+	background-color: var(--control-elements-background);
+}
+
+.recommended-article__cover > img {
+	width: 100%;
 }
 
 .recommended-article__footer {
-	margin-top: 1em;
 	display: flex;
 	align-items: center;
+	margin-top: 1em;
 }
 
 .recommended-article__resource {
@@ -185,41 +193,41 @@ span::selection {
 /*----------  Highlight Popup  ----------*/
 
 .highlight-popup {
-	background-color: var(--white);
-	box-shadow: 0px 5px 12px rgba(180, 173, 167, 0.36);
-	border-radius: .5em;
-	padding: 1.5em 2em;
-	width: 100%;
 	box-sizing: border-box;
+	width: 100%;
+	padding: 1.5em 2em;
+	border-radius: .5em;
+	box-shadow: 0px 5px 12px rgba(180, 173, 167, 0.36);
+	background-color: var(--white);
 }
 
 .highlight-popup__main {
 	display: flex;
-	column-gap: 2em;
 	align-items: center;
+	column-gap: 2em;
 }
 
 .highlight-popup__colors {
-	list-style: none;
-	padding: 0;
 	display: flex;
 	flex-grow: 1;
 	justify-content: space-between;
+	padding: 0;
+	list-style: none;
 }
 
 
 input[type="radio"].highlight-color {
+	box-sizing: content-box;
+	display: block;
+	margin: 0;
 	width: 2.5em;
 	height: 2.5em;
 	padding: .3em;
-	box-sizing: content-box;
 	border-width: .2em;
 	border-style: solid;
-	appearance: none;
 	border-radius: 50%;
-	margin: 0;
-	display: block;
 	transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+	appearance: none;
 }
 
 input[type="radio"].highlight-color:checked {
@@ -239,9 +247,9 @@ input[type="radio"].highlight-color:checked {
 }
 
 .highlight-popup__close {
+	height: 1.7em;
 	padding-left: 1em;
 	border-left: 1px solid var(--control-elements-background);
-	height: 1.7em;
 }
 
 /* --- Comments --- */
@@ -251,11 +259,11 @@ input[type="radio"].highlight-color:checked {
 }
 
 .highlight-popup__comments > span[contenteditable="true"]:empty:before {
-	content: attr(aria-placeholder);
 	display: block;
 	color: var(--grey);
-	font-style: normal;
 	font-weight: normal;
+	font-style: normal;
+	content: attr(aria-placeholder);
 }
 
 
