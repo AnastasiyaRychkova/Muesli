@@ -23,10 +23,10 @@ body {
 	--dark-background: #252525;
 	--stroke: #EDEDED;
 	--highlight__search__color: #FFBE15;
-	--orange__highllight__color: #FE8D59;
-	--turquoise__highllight__color: #61DAC5;
-	--pur__highllight__color: #F298E7;
-	--blue__highllight__color: #00CDE2;
+	--orange__highlight__color: #FE8D59;
+	--turquoise__highlight__color: #61DAC5;
+	--pur__highlight__color: #F298E7;
+	--blue__highlight__color: #00CDE2;
 	--green__highlight-color: #67C872;
 
 
@@ -42,7 +42,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 
 
 /*=============================================
@@ -88,9 +87,10 @@ fieldset {
 }
 
 input {
-	font-size: inherit;
 	background-color: transparent;
+	font-size: inherit;
 }
+
 
 /*=====  End of Reset Default  ======*/
 
@@ -195,6 +195,14 @@ input {
 	font-style: normal;
 }
 
+.annotation-text {
+	line-height: 1.214em;
+	font-family: var(--text-font);
+	font-size: var(--normal-font-size);
+	font-weight: normal;
+	font-style: italic;
+}
+
 
 .multi-line--2 {
 	display: -webkit-box;
@@ -248,6 +256,10 @@ input {
 	top: 0;
 	z-index: 2;
 	background-color: var(--white);
+}
+
+.page-header--page-part {
+	background-color: transparent;
 }
 
 .page-content {
@@ -748,11 +760,11 @@ ul.editable-tags-list {
 }
 
 ul.editable-tags-list > .tag-item {
-	padding: 0 1em;
-	height: 4em;
 	display: flex;
 	align-items: center;
 	column-gap: 1em;
+	height: 4em;
+	padding: 0 1em;
 	border-radius: 1em;
 }
 
@@ -772,9 +784,9 @@ ul.editable-tags-list--dark > .tag-item--new {
 }
 
 .editable-tag__btn {
+	padding: 0;
 	border-radius: 50%;
 	color: inherit;
-	padding: 0;
 }
 
 .editable-tag__btn > svg {
@@ -1084,37 +1096,37 @@ input[type="radio"].user-form__radio-btn:checked + .user-form__radio-label::befo
 /*----------  Switcher  ----------*/
 
 input[type="checkbox"].switcher__input {
-	appearance: none;
-	position: relative;
 	display: block;
+	position: relative;
+	margin: 0;
 	width: 5.4em;
 	height: 3em;
-	margin: 0;
-	background: var(--control-elements-background);
-	border-radius: 30px;
 	outline: none;
+	border-radius: 30px;
+	background: var(--control-elements-background);
+	appearance: none;
 }
 
 .switcher__input::after {
-	content: "";
 	
 	display: block;
 	position: absolute;
-	left: .3em;
 	top: .3em;
+	left: .3em;
 	
 	width: 2.4em;
 	height: 2.4em;
-	background-color: var(--grey);
 	border-radius: 50%;
+	background-color: var(--grey);
 	
 	transform: translateX(0);
 	transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+	content: "";
 }
 
 .switcher__input:checked::after {
-	transform: translateX(100%);
 	background-color: var(--yellow);
+	transform: translateX(100%);
 }
 
 

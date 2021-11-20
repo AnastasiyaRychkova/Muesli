@@ -111,3 +111,30 @@ class TabsHandler
 			}
 	}
 }
+
+
+
+
+
+function headerColorizeInit() {
+	const header = document.querySelector( '.page-header--scrolled.page-header--text-only' );
+	if( !header )
+		return;
+	
+	document.addEventListener(
+		'scroll',
+		() => {
+			if( window.scrollY > 10 )
+			{
+				if( header.classList.contains( 'page-header--page-part' ) )
+					header.classList.remove( 'page-header--page-part' );
+			}
+			else {
+				if( !header.classList.contains( 'page-header--page-part' ) )
+					header.classList.add( 'page-header--page-part' );
+			}
+		}
+	);
+}
+
+headerColorizeInit();

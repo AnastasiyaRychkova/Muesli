@@ -34,6 +34,7 @@
 	margin-right: 1em;
 	width: 4em;
 	height: 4em;
+	overflow: hidden;
 
 	border-radius: 50%;
 	background-color: var(--control-elements-background);
@@ -49,6 +50,7 @@
 	margin-bottom: 2em;
 	width: 100vw;
 	height: 16em;
+	overflow: hidden;
 
 	background-color: var(--control-elements-background);
 }
@@ -102,6 +104,7 @@
 	background-color: var(--control-elements-background);
 	border-radius: .5em;
 	margin-bottom: 1em;
+	overflow: hidden;
 }
 
 .recommended-article__footer {
@@ -122,4 +125,149 @@
 .recommended-article__more-btn {
 	display: flex;
 	flex-direction: row-reverse;
+}
+
+
+
+/*----------  Highlights  ----------*/
+
+span::selection {
+	background-color: var(--highlight__search__color);
+}
+
+.highlighting--1,
+.highlight-color--1 {
+	background-color: var(--turquoise__highlight__color);
+}
+
+.highlight-color--1 {
+	border-color: var(--turquoise__highlight__color);
+}
+
+.highlighting--2,
+.highlight-color--2 {
+	background-color: var(--blue__highlight__color);
+}
+
+.highlight-color--2 {
+	border-color: var(--blue__highlight__color);
+}
+
+.highlighting--3,
+.highlight-color--3 {
+	background-color: var(--green__highlight-color);
+}
+
+.highlight-color--3 {
+	border-color: var(--green__highlight-color);
+}
+
+.highlighting--4,
+.highlight-color--4 {
+	background-color: var(--pur__highlight__color);
+}
+
+.highlight-color--4 {
+	border-color: var(--pur__highlight__color);
+}
+
+.highlighting--5,
+.highlight-color--5 {
+	background-color: var(--orange__highlight__color);
+}
+
+.highlight-color--5 {
+	border-color: var(--orange__highlight__color);
+}
+
+
+
+/*----------  Highlight Popup  ----------*/
+
+.highlight-popup {
+	background-color: var(--white);
+	box-shadow: 0px 5px 12px rgba(180, 173, 167, 0.36);
+	border-radius: .5em;
+	padding: 1.5em 2em;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.highlight-popup__main {
+	display: flex;
+	column-gap: 2em;
+	align-items: center;
+}
+
+.highlight-popup__colors {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+}
+
+
+input[type="radio"].highlight-color {
+	width: 2.5em;
+	height: 2.5em;
+	padding: .3em;
+	box-sizing: content-box;
+	border-width: .2em;
+	border-style: solid;
+	appearance: none;
+	border-radius: 50%;
+	margin: 0;
+	display: block;
+	transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+
+input[type="radio"].highlight-color:checked {
+	border-color: var(--control-elements-background);
+	background-clip: content-box;
+}
+
+/* --- Close Button --- */
+.highlight-popup__close-btn {
+	padding: 0;
+}
+
+.highlight-popup__close-btn > svg {
+	width: 2.4em;
+	height: 1.7em;
+	color: var(--grey);
+}
+
+.highlight-popup__close {
+	padding-left: 1em;
+	border-left: 1px solid var(--control-elements-background);
+	height: 1.7em;
+}
+
+/* --- Comments --- */
+.highlight-popup__comments {
+	margin-top: 2em;
+	padding: .35em 0;
+}
+
+.highlight-popup__comments > span[contenteditable="true"]:empty:before {
+	content: attr(aria-placeholder);
+	display: block;
+	color: var(--grey);
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+
+
+/*----------  ⚠ Заглушка  ----------*/
+
+.article-page > article {
+	position: relative;
+}
+
+.highlight-popup {
+	position: absolute;
+	top: 43em;
 }
