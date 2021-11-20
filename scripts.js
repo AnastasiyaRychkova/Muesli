@@ -1,3 +1,22 @@
+
+/*=============================================
+=            CONSTANTS            =
+=============================================*/
+
+const SUBSCRIBED_CLASS = 'subscribe-btn--subscribed';
+const SAVED_CLASS = 'saved-btn--saved';
+
+
+/*=====  End of CONSTANTS  ======*/
+
+
+
+
+
+/*=============================================
+=                    Tabs                    =
+=============================================*/
+
 /**
  * Класс для управления вкладками на странице.
  * 
@@ -114,8 +133,13 @@ class TabsHandler
 
 
 
+/*=============================================
+=                   Header                   =
+=============================================*/
 
-
+/**
+ * Повесить слушателя на событие прокрутки экрана, чтобы менять цвет шапки, когда она отрывается от верхнего края страницы
+ */
 function headerColorizeInit() {
 	const header = document.querySelector( '.page-header--scrolled.page-header--text-only' );
 	if( !header )
@@ -138,3 +162,187 @@ function headerColorizeInit() {
 }
 
 headerColorizeInit();
+
+
+
+
+/*=============================================
+=               Document Clicks               =
+=============================================*/
+
+
+function handleDocumentClicks()
+{
+	document.addEventListener(
+		'click',
+		( event ) => {
+			/** @type {Element} */
+			const target = event.target;
+
+			if( target.closest( '.subscribe-btn' ) )
+			{
+				handleReadButtonClick( target.closest( '.subscribe-btn' ) );
+				return;
+			}
+
+			if( target.closest( '.saved-btn' ) )
+			{
+				handleSaveButtonClick( target.closest( '.saved-btn' ) );
+				return;
+			}
+		}
+	)
+}
+
+handleDocumentClicks();
+
+
+
+/*=============================================
+=                 Read Button                 =
+=============================================*/
+
+/**
+ * Обработать клик по кнопке подписки на ресурс (Читать)
+ * 
+ * @param {HTMLButtonElement} button
+ */
+function handleReadButtonClick( button )
+{
+	if( button.classList.contains( SUBSCRIBED_CLASS ) )
+	{
+		button.classList.remove( SUBSCRIBED_CLASS );
+		button.querySelector( 'span' ).textContent = 'Читать'
+	}
+	else {
+		button.classList.add( SUBSCRIBED_CLASS );
+		button.querySelector( 'span' ).textContent = 'Читаю';
+	}
+}
+
+
+/*=============================================
+=               Saving article               =
+=============================================*/
+
+
+/**
+ * Обработать клик по кнопке сохранения статьи
+ * 
+ * @param {HTMLButtonElement} button
+ */
+function handleSaveButtonClick( button )
+{
+	if( button.classList.contains( SAVED_CLASS ) )
+	{
+		button.classList.remove( SAVED_CLASS );
+		return;
+	}
+	
+	/** @type {HTMLElement} */
+	const modalWindow = document.querySelector( '.modal-window' );
+	if( !modalWindow )
+	{
+		console.warn( 'Can not save article. Modal window is missing.')
+		return;
+	}
+		
+	openModalWindow( modalWindow, button );
+
+	
+}
+
+
+/**
+ * @param {HTMLElement} window
+ */
+function clearRadioSelection( window ) {
+	window.querySelectorAll('input[type="radio"]')
+		.forEach(
+			(input) => {
+				input.checked = false;
+			}
+		);
+}
+
+/**
+ * @param {HTMLElement} modalWindow
+ * @param {HTMLButtonElement} saveButton
+ */
+function openModalWindow( modalWindow, savedArticleButton )
+{
+	clearRadioSelection( modalWindow );
+	modalWindow.dataset.closed = false;
+	
+	/** @type {HTMLUListElement} */
+	const folderList = modalWindow.querySelector( '.folder-selection__folder-list' );
+	/** @type {HTMLButtonElement} */
+	const saveButton = modalWindow.querySelector( '.main-action-btn' );
+	/** @type {HTMLButtonElement} */
+	const cancelButton = modalWindow.querySelector( '.additional-action-btn' );
+	if( !folderList ||
+		!saveButton ||
+		!cancelButton
+	)
+		return;
+
+	
+	saveButton.disabled = true;
+
+	const closeModalWindow = () =>
+	{
+		folderList.removeEventListener(
+			'change',
+			activateSaveButton,
+		);
+
+		saveButton.removeEventListener(
+			'click',
+			saveArticle,
+		);
+
+		cancelButton.removeEventListener(
+			'click',
+			closeWindow,
+		);
+
+		modalWindow.dataset.closed = true;
+		clearRadioSelection( modalWindow );
+	}
+
+	const activateSaveButton = () => {
+		saveButton.disabled = false;
+	};
+
+	const saveArticle = ( event ) => {
+		event.preventDefault();
+		closeModalWindow( modalWindow );
+		savedArticleButton.classList.add( SAVED_CLASS );
+	};
+
+	const closeWindow = () => {
+		closeModalWindow( modalWindow );
+	};
+
+
+	folderList.addEventListener(
+		'change',
+		activateSaveButton,
+		{
+			once: true,
+		}
+	);
+
+	saveButton.addEventListener(
+		'click',
+		saveArticle,
+	);
+
+	cancelButton.addEventListener(
+		'click',
+		closeWindow,
+	);
+}
+
+
+
